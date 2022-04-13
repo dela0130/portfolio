@@ -56,9 +56,203 @@ body {
     font-family: obviously-narrow, sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 2vw;
 }
 
-h1 {
-    font-size: 10em;
+.display {
+	font-size: 109.67px;
+	font-weight: 600;
+}
+
+.subtitle {
+	font-size: 25.89px;
+	font-weight: 400;
+}
+
+h1{
+	font-size: 67.78px;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 41.89px;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 25.89px;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+nav {
+	font-size: 25.89px;
+}
+
+.link {
+	font-size: 25.89px;
+	color: #A63B51;
+}
+
+p {
+	font-size: 16px;
+	font-family: obviously, sans-serif;
+}
+
+aside {
+	font-size: 9.89px;
+	font-weight: 400;
+}
+
+strong {
+	color: #A63B51;
+}
+
+@media only screen and (min-width: 768px) {
+	.display {
+		font-size: 177.45px;
+		font-weight: 600;
+	}
+
+	.subtitle {
+		font-size: 41.89px;
+		font-weight: 400;
+	}
+
+	h1{
+		font-size: 109.67px;
+		font-weight: 600;
+	}
+
+	h2 {
+		font-size: 67.78px;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-size: 41.89px;
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	nav {
+		font-size: 25.89px;
+	}
+
+	.link {
+		font-size: 25.89px;
+		color: #A63B51;
+	}
+
+	p {
+		font-size: 16px;
+		font-family: obviously, sans-serif;
+	}
+
+	aside {
+		font-size: 9.89px;
+		font-weight: 400;
+	}
+}
+
+@media only screen and (min-width: 1280px) {
+	.display {
+		font-size: 287.11px;
+		font-weight: 600;
+	}
+
+	.subtitle {
+		font-size: 67.78px;
+		font-weight: 400;
+	}
+
+	h1{
+		font-size: 177.45px;
+		font-weight: 600;
+	}
+
+	h2 {
+		font-size: 109.67px;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-size: 67.78px;
+		font-weight: 600;
+	}
+
+	nav {
+		font-size: 25.89px;
+	}
+
+	.link {
+		font-size: 25.89px;
+		color: #A63B51;
+	}
+
+	p {
+		font-size: 16px;
+		font-family: obviously, sans-serif;
+	}
+
+	aside {
+		font-size: 9.89px;
+		font-weight: 400;
+	}
+}
+
+
+@media only screen and (min-width: 1920px) {
+	.display {
+		font-size: 430.61px;
+		font-weight: 600;
+	}
+
+	.subtitle {
+		font-size: 101.66px;
+		font-weight: 400;
+		
+	}
+
+	h1{
+		font-size: 266.14px;
+		font-weight: 600;
+	}
+
+	h2 {
+		font-size: 200px;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-size: 101.66px;
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: 62.83px;
+		font-weight: 600;
+	}
+
+	h5, nav {
+		font-size: 38.83px;
+		font-weight: 400;
+	}
+
+	p {
+		font-size: 24px;
+		font-family: obviously, sans-serif;
+	}
+
+	aside {
+		font-size: 14.83px;
+		font-weight: 400;
+	}
 }
