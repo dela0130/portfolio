@@ -6,11 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/kxk1pmj.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- Partially followed these instructions: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs-->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <title>Kev D's Portfolio</title>
 </head>
 <body>
     <header>
-        <div>Logo</div>
+        <picture> 
+            <source srcset="images/logo/wide-352-3x.png 3x,
+                            images/logo/wide-352-2x.png 2x,
+                            images/logo/wide-352-1x.png                            
+                            "
+                    media="(min-width: 1280px)"/>
+            <source srcset="images/logo/wide-240-3x.png 3x,
+                            images/logo/wide-240-2x.png 2x,
+                            images/logo/wide-240-1x.png                            
+                            "
+                    media="(min-width: 768px)"/>
+            <img srcset=    "images/logo/wide-120-3x.png 3x,
+                            images/logo/wide-120-2x.png 2x,
+                            "
+                src="images/logo/wide-120-1x.png"
+                            alt="Kev.D's logo."
+                    />
+        </picture>
         <nav>
             <ul>
                 <li>
@@ -29,7 +50,6 @@
         <p class="subtitle">Kev D. is a technical writer <strong>and</strong> a designer. He wants to help you create with purpose.</p>
     </header>
     <main>
-        <!-- Changing from original design. The original h1 said only "Portfolio". Since an h1 on the homepage should be the company's name, not only the page title, I'm changing it to "Kev D's Portfolio" according to: https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/#text -->
         <h1>Kev D's Portfolio</h1>
         <section>
             <h2>Moody Pops</h2>
