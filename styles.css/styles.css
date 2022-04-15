@@ -48,8 +48,10 @@ table {
 }
 
 
-/*  `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````                                       My code begins
+/*  `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````                                       
 
+				My code begins
+	
 `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
 
 body {
@@ -111,7 +113,104 @@ strong {
 	color: #A63B51;
 }
 
+/*  `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````                                   
+
+				Header
+	
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
+nav {
+	position: fixed;
+	width:100%;
+	height: 88px;
+	top:0;
+	background-color: #fff;
+}
+
+
+.nav {
+	width: 100%;
+	position: relative;
+	padding-top: 40px;
+	padding-left: 8px;
+  }
+
+  .nav > .nav-btn {
+	display: inline-block;
+	position: absolute;
+	right: 23px;
+	top: 0px;
+  }
+  .nav > .nav-btn > label {
+	display: inline-block;
+	width: 48px;
+	height: 40px;
+	margin-top: 40px;
+  }
+  .nav > .nav-btn > label:hover span,.nav  #nav-check:checked ~ .nav-btn > label > span {
+	background-color: #A63B51;
+  }
+  .nav > .nav-btn > label > span {
+	display: block;
+	width: 48px;
+	height: 8px;
+	margin-bottom: 8px;
+	border-radius: 8px;
+	background-color: #000;
+  }
+  .nav > .nav-links {
+	position: absolute;
+	display: block;
+	width: 100%;
+	background-color: #fff;
+	height: 0px;
+	overflow-y: hidden;
+	top: 88px;
+	left: 0;
+  }
+  .nav > .nav-links > a {
+	display: block;
+	width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+	height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+	height: calc(100vh - 50px);
+	overflow-y: hidden;
+  }
+  .nav > #nav-check {
+	display: none;
+  }
+ 
+  .header-banner {
+	  margin-top: 264px;
+  }
+
+  
+  
+/*  `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````                                       
+
+				Gettin' bigger
+	
+`````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
+
 @media only screen and (min-width: 768px) {
+
+	.nav > .nav-btn {
+		display: none;
+	  }
+	  	  
+	  .nav > .nav-links > a {
+		display: inline-block;
+		padding: 13px 10px 13px 10px;
+		text-decoration: none;
+		color: #efefef;
+	  }
+	  
+	  .nav > .nav-links > a:hover {
+		background-color: rgba(0, 0, 0, 0.3);
+	  }
+
 	.display {
 		font-size: 177.45px;
 		font-weight: 600;

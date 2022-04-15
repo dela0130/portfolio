@@ -10,53 +10,93 @@
     <!-- Partially followed these instructions: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs-->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
+
     <title>Kev D's Portfolio</title>
 </head>
 <body>
     <header>
-        <picture> 
-            <source srcset="images/logo/wide-352-3x.png 3x,
-                            images/logo/wide-352-2x.png 2x,
-                            images/logo/wide-352-1x.png                            
-                            "
-                    media="(min-width: 1280px)"/>
-            <source srcset="images/logo/wide-240-3x.png 3x,
-                            images/logo/wide-240-2x.png 2x,
-                            images/logo/wide-240-1x.png                            
-                            "
-                    media="(min-width: 768px)"/>
-            <img srcset=    "images/logo/wide-120-3x.png 3x,
-                            images/logo/wide-120-2x.png 2x,
-                            "
-                src="images/logo/wide-120-1x.png"
-                            alt="Kev.D's logo."
-                    />
-        </picture>
+         <!-- Nav from this responsive hamburger menu codepen: https://codepen.io/jo_Geek/pen/xgbaEr -->
         <nav>
-            <ul>
-                <li>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <a href="index.html">
+                <picture> 
+                    <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                    <source srcset="images/logo/wide-352-3x.png 3x,
+                                    images/logo/wide-352-2x.png 2x,
+                                    images/logo/wide-352-1x.png                            
+                                    "
+                            media="(min-width: 1280px)"/>
+                    <source srcset="images/logo/wide-240-3x.png 3x,
+                                    images/logo/wide-240-2x.png 2x,
+                                    images/logo/wide-240-1x.png                            
+                                    "
+                            media="(min-width: 768px)"/>
+                    <img srcset=    "images/logo/wide-120-3x.png 3x,
+                                    images/logo/wide-120-2x.png 2x,
+                                    "
+                        src="images/logo/wide-120-1x.png"
+                                    alt="Kev.D's logo."
+                            />
+                </picture>
+            </a>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#">
                     Portfolio
-                </li>
-                <li>
+                    </a>
+        
+                    <a href="#">
                     About
-                </li>
-                <li>
+                    </a>
+        
+                    <a href="#">
                     Contact
-                </li>
-            </ul>
+                    </a>
+            </div>
+        </div>
         </nav>
-    
+        <div class="header-banner">
         <div class="display">Shock<br><strong>and</strong> awe</div>
         <p class="subtitle">Kev D. is a technical writer <strong>and</strong> a designer. He wants to help you create with purpose.</p>
+    </div>
     </header>
     <main>
         <h1>Kev D's Portfolio</h1>
         <section>
             <h2>Moody Pops</h2>
         </section>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis nulla quis egestas auctor. Sed a eleifend nibh. Vivamus ut blandit risus. Mauris iaculis varius hendrerit. Aenean id ullamcorper eros. Vivamus ullamcorper a neque eget semper. Vestibulum neque eros, tincidunt eget posuere nec, hendrerit vel enim. Praesent diam magna, volutpat in metus et, viverra pharetra elit. Integer in lorem faucibus, bibendum sapien ut, sollicitudin massa. Duis ut ultricies nulla. Sed quis diam eu ipsum scelerisque congue eu nec leo.
+
+            Aliquam at sagittis massa. Proin tempor ipsum non egestas tempus. Proin mattis ipsum hendrerit, euismod augue euismod, vestibulum est. Ut mattis, lorem in placerat luctus, elit leo interdum velit, id scelerisque arcu quam non justo. Sed aliquet ut mauris sit amet condimentum. Proin enim massa, sagittis et nulla vel, semper efficitur nisl. Donec posuere enim ut velit lacinia vestibulum. Praesent lorem eros, mollis ut nisi rutrum, consectetur cursus lacus. Curabitur a erat nisl.
+            
+            Pellentesque sed tincidunt turpis. Morbi ullamcorper, nunc quis ullamcorper aliquet, risus ex egestas turpis, vel ultrices justo elit vitae mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In vehicula ornare massa et vehicula. Aliquam tempus nibh sed mauris accumsan, at ultrices odio pellentesque. Phasellus at nisl quis mauris efficitur finibus in nec est. Mauris tellus eros, luctus vel semper sed, pretium eu diam.
+            
+            Morbi condimentum quam a dolor feugiat convallis. Cras auctor finibus nulla lacinia congue. Donec porttitor auctor sodales. Vivamus maximus lacinia diam tincidunt consequat. Nullam venenatis pretium blandit. Maecenas feugiat, ante ac laoreet tempor, dui sem venenatis leo, sit amet convallis nunc tortor eget orci. Sed maximus nisl in eros dignissim bibendum. Cras commodo tortor arcu, nec fringilla tortor vehicula a. Nulla pellentesque sodales dui, nec laoreet mi. Morbi iaculis viverra purus, eu rutrum dui placerat ac. Donec faucibus, risus sed dapibus pulvinar, arcu metus convallis ligula, sit amet laoreet tellus lorem nec odio.
+            
+            Donec urna nisi, congue viverra est eget, elementum porta risus. Nam nec congue turpis. Aenean quis ultrices sapien, et egestas urna. Proin quis ultricies ex. In a accumsan lacus, at porta orci. Quisque arcu urna, tincidunt ut augue non, posuere consequat nisl. Etiam faucibus pulvinar ornare. Pellentesque enim magna, placerat quis tristique quis, faucibus nec neque. Curabitur blandit orci pharetra, porttitor augue quis, tristique diam. Curabitur vitae dolor lobortis, mollis erat eget, lacinia leo. Fusce commodo tortor sed arcu porttitor, sagittis viverra mi tincidunt. Donec eu sagittis urna. Aenean ullamcorper fringilla sapien, eu condimentum eros ornare a. Maecenas velit lorem, auctor at condimentum sed, consequat vel tortor. Mauris non nunc elementum, interdum sapien blandit, suscipit lacus. Morbi id accumsan mi, sed volutpat ligula. </p>
+            
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis nulla quis egestas auctor. Sed a eleifend nibh. Vivamus ut blandit risus. Mauris iaculis varius hendrerit. Aenean id ullamcorper eros. Vivamus ullamcorper a neque eget semper. Vestibulum neque eros, tincidunt eget posuere nec, hendrerit vel enim. Praesent diam magna, volutpat in metus et, viverra pharetra elit. Integer in lorem faucibus, bibendum sapien ut, sollicitudin massa. Duis ut ultricies nulla. Sed quis diam eu ipsum scelerisque congue eu nec leo.
+            
+            Aliquam at sagittis massa. Proin tempor ipsum non egestas tempus. Proin mattis ipsum hendrerit, euismod augue euismod, vestibulum est. Ut mattis, lorem in placerat luctus, elit leo interdum velit, id scelerisque arcu quam non justo. Sed aliquet ut mauris sit amet condimentum. Proin enim massa, sagittis et nulla vel, semper efficitur nisl. Donec posuere enim ut velit lacinia vestibulum. Praesent lorem eros, mollis ut nisi rutrum, consectetur cursus lacus. Curabitur a erat nisl.
+            
+            Pellentesque sed tincidunt turpis. Morbi ullamcorper, nunc quis ullamcorper aliquet, risus ex egestas turpis, vel ultrices justo elit vitae mi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In vehicula ornare massa et vehicula. Aliquam tempus nibh sed mauris accumsan, at ultrices odio pellentesque. Phasellus at nisl quis mauris efficitur finibus in nec est. Mauris tellus eros, luctus vel semper sed, pretium eu diam.
+            
+            Morbi condimentum quam a dolor feugiat convallis. Cras auctor finibus nulla lacinia congue. Donec porttitor auctor sodales. Vivamus maximus lacinia diam tincidunt consequat. Nullam venenatis pretium blandit. Maecenas feugiat, ante ac laoreet tempor, dui sem venenatis leo, sit amet convallis nunc tortor eget orci. Sed maximus nisl in eros dignissim bibendum. Cras commodo tortor arcu, nec fringilla tortor vehicula a. Nulla pellentesque sodales dui, nec laoreet mi. Morbi iaculis viverra purus, eu rutrum dui placerat ac. Donec faucibus, risus sed dapibus pulvinar, arcu metus convallis ligula, sit amet laoreet tellus lorem nec odio.
+            
+            Donec urna nisi, congue viverra est eget, elementum porta risus. Nam nec congue turpis. Aenean quis ultrices sapien, et egestas urna. Proin quis ultricies ex. In a accumsan lacus, at porta orci. Quisque arcu urna, tincidunt ut augue non, posuere consequat nisl. Etiam faucibus pulvinar ornare. Pellentesque enim magna, placerat quis tristique quis, faucibus nec neque. Curabitur blandit orci pharetra, porttitor augue quis, tristique diam. Curabitur vitae dolor lobortis, mollis erat eget, lacinia leo. Fusce commodo tortor sed arcu porttitor, sagittis viverra mi tincidunt. Donec eu sagittis urna. Aenean ullamcorper fringilla sapien, eu condimentum eros ornare a. Maecenas velit lorem, auctor at condimentum sed, consequat vel tortor. Mauris non nunc elementum, interdum sapien blandit, suscipit lacus. Morbi id accumsan mi, sed volutpat ligula. </p>
     </main>
     <footer>
 
     </footer>
+
 </body>
+
 </html>
