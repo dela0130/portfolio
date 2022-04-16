@@ -160,14 +160,19 @@ nav #contact {
 	margin-top: 40px;
   }
 
-  .nav > .nav-btn > label:hover span,.nav  #nav-check:checked ~ .nav-btn > label > span {
+  .nav > .nav-btn > label:hover span, .nav  #nav-check:checked ~ .nav-btn > label > span {
 	background-color: #A63B51;
   }
 
+  #nav-check:not(:checked) ~ .nav-btn > label > span
+  {
+	  background-color: aqua;
+  }
 
 .nav > .nav-btn > label:active span {
 	transform: scale(1.2, 1.2);
 	background-color: #A63B51;
+	transition: all .2s;
 }
 
   .nav > .nav-btn > label > span {
