@@ -216,7 +216,7 @@ nav #contact {
 	text-align: center;
   }
 .nav > #nav-check:checked ~ .nav-links {
-	height: calc(100vh - 100px);
+	height: calc(100vh);
 	overflow-y: hidden;
 	display: flex;
 	flex-direction: column;
