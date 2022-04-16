@@ -166,7 +166,7 @@ nav #contact {
 
   #nav-check:not(:checked) ~ .nav-btn > label > span
   {
-	  background-color: aqua;
+	  background-color: #000;
   }
 
 .nav > .nav-btn > label:active span {
