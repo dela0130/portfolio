@@ -63,11 +63,15 @@ body {
 .display {
 	font-size: 109.67px;
 	font-weight: 600;
+	margin-bottom: 56px;
 }
 
 .subtitle {
+	font-family: obviously-narrow, sans-serif;
 	font-size: 25.89px;
 	font-weight: 400;
+	text-align: right;
+	margin-top:24px;
 }
 
 h1{
@@ -140,31 +144,31 @@ nav #contact {
 	padding-left: 8px;
   }
 
-  .nav > .nav-btn {
+.nav > .nav-btn {
 	display: inline-block;
 	position: absolute;
 	right: 23px;
 	top: 0px;
   }
-  .nav > .nav-btn > label {
+.nav > .nav-btn > label {
 	display: inline-block;
 	width: 48px;
 	height: 40px;
 	margin-top: 40px;
   }
 
-  .nav > .nav-btn > label {
+.nav > .nav-btn > label {
 	display: inline-block;
 	width: 48px;
 	height: 40px;
 	margin-top: 40px;
   }
 
-  .nav > .nav-btn > label:hover span, .nav  #nav-check:checked ~ .nav-btn > label > span {
+.nav > .nav-btn > label:hover span, .nav  #nav-check:checked ~ .nav-btn > label > span {
 	background-color: #A63B51;
   }
 
-  #nav-check:not(:checked) ~ .nav-btn > label > span
+#nav-check:not(:checked) ~ .nav-btn > label > span
   {
 	  background-color: #000;
 	  
@@ -176,7 +180,7 @@ nav #contact {
 	
 }
 
-  .nav > .nav-btn > label > span {
+.nav > .nav-btn > label > span {
 	display: block;
 	width: 48px;
 	height: 8px;
@@ -186,7 +190,7 @@ nav #contact {
   }
 
 
-  .nav > .nav-links {	
+.nav > .nav-links {	
 	position: absolute;
 	display: block;
 	width: 100%;
@@ -197,12 +201,12 @@ nav #contact {
 	left: 0;
 	transition: all 0.2s ease-in-out;
   }
-  .nav > .nav-links > a {
+.nav > .nav-links > a {
 	display: block;
 	width: 100%;
 	color:#000;
   }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
+.nav > #nav-check:not(:checked) ~ .nav-links {
 	height: 0px;
 	/* This is necessary, so when unchecked, the elements stay in the same place as it transitions. */
 	display: flex;
@@ -211,7 +215,7 @@ nav #contact {
 	align-items: center;
 	text-align: center;
   }
-  .nav > #nav-check:checked ~ .nav-links {
+.nav > #nav-check:checked ~ .nav-links {
 	height: calc(100vh - 100px);
 	overflow-y: hidden;
 	display: flex;
@@ -220,16 +224,55 @@ nav #contact {
 	align-items: center;
 	text-align: center;
   }
-  .nav > #nav-check {
+
+  
+
+  .nav > #nav-check:checked ~ .nav-links > a > svg > .b {
+	animation: dash .25s linear .2s forwards;
+  }
+
+  #nav-check:not(:checked) ~ .nav-links > a > svg {
+	display:none;
+}
+
+.nav > #nav-check {
 	display: none;
   }
  
-  .header-banner {
+.header-banner {
 	  margin-top: 264px;
   }
 
-  
-  
+
+.current-page {
+	position: relative;
+}
+
+.selector {
+	position: absolute;
+	top: -50%;
+	left: 10px;
+	width:90%;
+}
+
+/* Line animation for selector from: https://css-tricks.com/svg-line-animation-works/ */
+
+.b {
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+	visibility: hidden;
+  }
+  @keyframes dash {
+	from {
+	  stroke-dashoffset: 1;
+	  stroke: #ffffff00; 
+	}
+	to {
+	  stroke-dashoffset: 0;
+	  stroke: #a63b51;
+	  visibility: visible;
+	}
+}
 /*  `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````                                       
 
 				Gettin' bigger
