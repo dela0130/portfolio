@@ -159,21 +159,16 @@ nav #contact {
 	height: 40px;
 	margin-top: 40px;
   }
-  /* @media (hover: hover) { */
-  /* NOT NEEDED? - To prevent the hover from sticking: https://css-tricks.com/solving-sticky-hover-states-with-media-hover-hover/ */
+
   .nav > .nav-btn > label:hover span,.nav  #nav-check:checked ~ .nav-btn > label > span {
 	background-color: #A63B51;
   }
-/* } */
 
-.nav #nav-check:not(:checked) ~ .nav-btn > label > span
-{
-	background-color: #000;
-  }
 
-  .nav > .nav-btn > label:active span {
-	  transform: scale(1.2, 1.2);
-  }
+.nav > .nav-btn > label:active span {
+	transform: scale(1.2, 1.2);
+	background-color: #A63B51;
+}
 
   .nav > .nav-btn > label > span {
 	display: block;
