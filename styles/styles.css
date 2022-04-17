@@ -161,13 +161,13 @@ header {
 }
 
 /* Animates the button press. */
-.next-screen:active, .next-page:active, .top-btn:active {
+.next-screen:active {
 	transform: scale(1.3, 1.3);
 }
 
 /* Makes the icon black on either a hover or button press. */
 .next-screen:hover svg #Icon_awesome-arrow-circle-right, .next-screen:active svg #Icon_awesome-arrow-circle-right{
-	fill: #000;
+	fill: #1f5673;
 }
 
 /* Due to the fixed header, this is required to make sure the next-screen anchor links to the correct place. */
@@ -401,6 +401,11 @@ nav {
 	margin-left: 8px;
 	box-shadow: 0 3px 6px #000;
 }
+
+.preview:active img, .preview:hover img {
+	opacity: 1;
+}
+
 .preview svg {
 	align-self: center;
 	margin-right: 32px;
@@ -422,6 +427,14 @@ nav {
 	z-index: 1;
 
 }
+
+.next-page:hover path {
+	fill: #000;
+}
+.next-page:active {
+	transform: scale(1.3, 1.3);
+}
+
 
 .includes-this {
 	position: absolute;
@@ -450,6 +463,14 @@ footer {
 	justify-content: end;
 	margin: 32px 16px;
 	text-decoration: unset;
+}
+
+.top-btn:active {
+	transform: scale(1.3, 1.3);
+}
+
+.top-btn:hover svg path {
+	fill:#000;
 }
 
 .top-text {
