@@ -326,7 +326,7 @@ nav {
 .nav > #nav-check:checked ~ .nav-links {
 	/* As explained in HTML in the header, there is <script> there to provide the correct vh for browsers. This is from: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
 	height: 100vh;/* Fallback for browsers that do not support Custom Properties */
-	height: calc(var(--vh, 1vh) * 100);
+	height: calc(var(--vh, 1vh) * 88);
 	overflow-y: hidden;
 	display: flex;
 	flex-direction: column;
