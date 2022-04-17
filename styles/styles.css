@@ -199,31 +199,15 @@ nav {
 	background-color: #fff;
 }
 
-/* Formats the contact link */
-
-nav #contact {
-	font-size: 25.89px;
-	font-weight: 400;
-	color:#A63B51;
-}
 
 
-/* makes sure the top banner is positioned correctly, has a 100% width and is able to contain the position:absolute hamburger button. */
+/* makes sure the top banner is positioned correctly. */
 
 .nav {
-	width: 100%;
-	position: relative;
-	padding-top: 40px;
-	padding-left: 8px;
-  }
-
-  /* Makes sure the hamburger button stays in the top-right. */
-
-.nav > .nav-btn {
-	display: inline-block;
-	position: absolute;
-	right: 23px;
-	top: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 16px 8px 0 8px;
   }
 
 
@@ -233,14 +217,13 @@ nav #contact {
 	display: inline-block;
 	width: 48px;
 	height: 40px;
-	margin-top: 40px;
   }
 
 
 /* Makes the hamburger button red when hovered, or when the menu is open. */
 
 
-.nav > .nav-btn > #hamburger:hover span, .nav  #nav-check:checked ~ .nav-btn > label > span {
+.nav > .nav-btn > #menu-toggle:hover span, .nav  #nav-check:checked ~ .nav-btn > label > span {
 	background-color: #A63B51;
   }
 
@@ -260,6 +243,14 @@ nav #contact {
 	
 }
 
+  /* To make the menu visible via keyboard. From: http://www.ashleysheridan.co.uk/blog/Making+an+Accessible+Hamburger+Menu# */
+  .menu-toggle:focus {
+    outline: 2px solid #1f5673;
+	padding: 5px;
+	border-radius: 8px;
+
+}
+
 /* This is the hamburger button's formatting, that turns empty <span> tags into a good, old icon.  */
 .nav > .nav-btn > label > span {
 	display: block;
@@ -270,7 +261,7 @@ nav #contact {
 	background-color: #000;
   }
 
-  /* This positions the mobile nav menu when it is told to animate out of it's hiding place. It's hidden now because of 'height:0'. But it'll show when the check box is checked. */
+  /* This positions the mobile nav menu when it is told to animate out of it's hiding place. It's normally doesn't show because of 'height:0'. It shows when the checkbox is checked. */
 
 .nav > .nav-links {	
 	position: absolute;
@@ -278,7 +269,7 @@ nav #contact {
 	width: 100%;
 	background-color: #fff;
 	height: 0;
-	overflow-y: hidden;
+	overflow: hidden;
 	top: 88px;
 	left: 0;
 	transition: all 0.2s ease-in-out;
@@ -286,10 +277,41 @@ nav #contact {
 
   /* This formats the links inside the mobile menu.  */
 .nav > .nav-links > a {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	color:#000;
   }
+  
+  /* This formats the links when hovering.  */
+
+  .nav > .nav-links > a:hover, .nav > .nav-links > a:focus {
+	  color:#A63B51;
+  }
+  .nav > .nav-links > .current-page {
+  text-decoration: none;
+  cursor:default;
+  }
+
+  .nav > .nav-links > .current-page:hover, .nav > .nav-links > .current-page:focus {
+	  color:#000;
+  }
+
+  /* Formats the contact link */
+
+#contact {
+	font-size: 25.89px;
+	font-weight: 400;
+	color:#A63B51;
+}
+
+/* Formats the contact link */
+
+#contact:hover, #contact:focus, #contact:active  {
+	color:#000;
+}
+
+#contact:active, 
 
 	/* This is necessary, so when unchecked, the elements stay in the same place as it transitions. */
 .nav > #nav-check:not(:checked) ~ .nav-links {
@@ -313,10 +335,13 @@ nav #contact {
 	text-align: center;
   }
 
+
   /* This hides the secret weapon. The form field that is the actual reason why the nav menu moves in and out is hidden. This makes the hamburger button look like a button. It's a CSS button, without the javascript */
   .nav > #nav-check {
 	display: none;
   }
+
+
 
 /* ------ red-circle-navigation-selector-swirl -------- */
 

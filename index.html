@@ -32,7 +32,7 @@ window.addEventListener('resize', () => {
          <!-- Nav from this responsive hamburger menu codepen: https://codepen.io/jo_Geek/pen/xgbaEr -->
         <nav>
         <div class="nav">
-            <input type="checkbox" id="nav-check">
+            <input type="checkbox"  id="nav-check">
             <a href="index.html">
                 <picture> 
                     <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
@@ -55,7 +55,7 @@ window.addEventListener('resize', () => {
                 </picture>
             </a>
             <div class="nav-btn">
-                <label id="hamburger" for="nav-check">
+                <label id="menu-toggle" class="menu-toggle" tabindex="0" for="nav-check">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -121,6 +121,29 @@ window.addEventListener('resize', () => {
     <footer>
 
     </footer>
+
+<script>
+
+// This is used to make sure the keyboard is able to control the mobile nav menu. For when users are using a narrow screen, on a PC. From: http://www.ashleysheridan.co.uk/blog/Making+an+Accessible+Hamburger+Menu#
+
+    var menuToggle = document.querySelector("#menu-toggle");
+var menu = document.querySelector("#nav-check");
+
+var enterKeyCode = 13;
+var spaceKeyCode = 32;
+
+menuToggle.addEventListener("keyup", function(event) {
+    if(event.keyCode == enterKeyCode || event.keyCode == spaceKeyCode) {
+        var menuOpen = menu.checked;
+
+        if(menuOpen) {
+            menu.checked = false;
+        } else {
+            menu.checked = true;
+        }
+    }
+});
+</script>
 
 
 </body>
