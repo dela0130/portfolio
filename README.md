@@ -18,3 +18,6 @@ Credits
 - Fonts
     - obviously-narrow by James Edmondson
         - https://fonts.adobe.com/designers/james-edmondson
+- Icons
+    - Icons for Design
+        - https://adobe.com/go/cc_plugins_discover_plugin?pluginId=02ec2f87&workflow=share
