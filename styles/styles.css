@@ -139,14 +139,19 @@ strong {
 /* Makes the header a full page and organizes the content within. With 'space-between', the next page button is forced to the bottom of the page. The header-banner would be pushed to the, if not for the large margin-top. */
 
 header {
-	/* As explained in HTML in the header, there is <script> there to provide the correct vh for browsers. This is from: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
-	height: 100vh;/* Fallback for browsers that do not support Custom Properties */
-
-	height: calc(var(--vh, 1vh) * 100);
+	height: 100vh;
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+}
+
+@media (hover:none) {
+	/* As explained in HTML in the header, there is <script> there to provide the correct vh for mobile browsers. This is from: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+	header {
+		height: 100vh;/* Fallback for browsers that do not support Custom Properties */
+		height: calc(var(--vh, 1vh) * 100);
+	}
 }
 
 /* This positions the header banner in the right spot. */
@@ -324,15 +329,22 @@ nav {
   /* This forces the menu to expand when the hamburger button is clicked. It forces the height from 0 to 100vh and formats the options to be centred. */
 .nav > #nav-check:checked ~ .nav-links {
 	
-	height: 100vh;/* Fallback for browsers that do not support Custom Properties */
-	/* As explained in HTML in the header, there is <script> there to provide the correct vh for browsers. This is from: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ It's multiplied  by 88 because of the fixed header. */
-	height: calc(var(--vh, 1vh) * 88);
+	
+	height: 100vh; /* This works fine for desktop browsers */
 	overflow-y: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 	text-align: center;
+  }
+
+  @media (hover:none) {
+	/* As explained in HTML in the header, there is <script> there to provide the correct vh for mobile browsers. This is from: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+	.nav > #nav-check:checked ~ .nav-links {
+	height: 100vh;/* Fallback for mobile browsers that do not support Custom Properties */
+	height: calc(var(--vh, 1vh) * 100);
+	}
   }
 
 
