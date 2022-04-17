@@ -142,7 +142,9 @@ strong {
 /* Makes the header a full page and organizes the content within. With 'space-between', the next page button is forced to the bottom of the page. The header-banner would be pushed to the, if not for the large margin-top. */
 
 header {
+	/* As explained in HTML in the header, there is <script> there to provide the correct vh for browsers. This is from: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
 	height: 100vh;/* Fallback for browsers that do not support Custom Properties */
+
 	height: calc(var(--vh, 1vh) * 100);
 	display:flex;
 	flex-direction: column;
@@ -300,6 +302,7 @@ nav #contact {
 
   /* This forces the menu to expand when the hamburger button is clicked. It forces the height from 0 to 100vh and formats the options to be centred. */
 .nav > #nav-check:checked ~ .nav-links {
+	/* As explained in HTML in the header, there is <script> there to provide the correct vh for browsers. This is from: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
 	height: 100vh;/* Fallback for browsers that do not support Custom Properties */
 	height: calc(var(--vh, 1vh) * 100);
 	overflow-y: hidden;
