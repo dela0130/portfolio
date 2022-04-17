@@ -139,7 +139,7 @@ strong {
 /* Makes the header a full page and organizes the content within. With 'space-between', the next page button is forced to the bottom of the page. The header-banner would be pushed to the, if not for the large margin-top. */
 
 header {
-	height: 100vh;
+	/* height: 100vh; */
 	display:flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -148,9 +148,11 @@ header {
 
 @media (hover:none) {
 	/* As explained in HTML in the header, there is <script> there to provide the correct vh for mobile browsers. This is from: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+	
 	header {
-		height: 100vh;/* Fallback for browsers that do not support Custom Properties */
-		height: calc(var(--vh, 1vh) * 100);
+		/* Fallback for browsers that do not support Custom Properties */
+		/* height: 100vh; */
+		/* height: calc(var(--vh, 1vh) * 100); */
 	}
 }
 
