@@ -8,8 +8,11 @@ Challenges
 - Coding everything - This seems like a big project
     - Maybe I'll code a little at a time.
 - Making the circle stroke appear around elements like the nav
-- Making the favicon change using media queries inside the svg.
+- Making the favicon change using media queries for prefers light or dark inside the svg.
     - I am skipping this, since I can't get it to work. You're supposed to be able to make media queries inside the  .svg, but for some reason, it's only picking up the prefers: dark option. Luckily, the favicon I have works well enough in dark or light.
+- The original design looks like it has a fixed height for the header. This works fine on the PC, but for mobile, a fixed height for the header element tends to break depending on the device or orientation. 
+    - So I'm using media queries to keep it for PC, but not for mobile.
+- It was a long process to get the mobile nav setup with it's animations, positioning and extra animated swirl.
 
 
 
