@@ -69,13 +69,24 @@ html {
    }
 }
 
+/* Fixing the view height issue, where the 100vh isn't the same on PC as on mobile. On mobile, the top of the browser can take some of this space, cutting off the bottom of page. These fixes are from: https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/  */
+
+html {
+	height: -webkit-fill-available;
+}
+
+body {	
+
+	min-height: 100vh;
+	min-height: -webkit-fill-available;
+}
 /* Fonts, spacing and a little bit of colour. */
 
 body {
     font-family: obviously-narrow, sans-serif;
     font-weight: 600;
-    font-style: normal;
-}
+    font-style: normal; }
+
 
 .display {
 	font-size: 109.67px;
