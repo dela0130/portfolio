@@ -67,7 +67,6 @@ window.addEventListener('resize', () => {
             <div class="nav-links">
 
                         <a href="index.html">
-                            
                             Portfolio
                         </a>
 
@@ -75,8 +74,6 @@ window.addEventListener('resize', () => {
                             <svg class="selector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 455.81 167.65"><defs><style>.a,.b{fill:none;stroke-miterlimit:10;}.a{stroke:#000;}.b{stroke:#a63b51;stroke-linecap:round;stroke-width:7px;}</style></defs><path class="a" d="M87.48,163.5" transform="translate(-75 -92.35)"/><path class="b" d="M78.5,179.5C123,191,208,199.86,284,201.5c137.31,3,254.24-8.86,242.5-51-8.73-31.36-96.89-66.11-242.5-51-133.21,13.83-167.8,57.36-182.5,89-14.49,31.19-.49,51.94,15,68" pathLength="1" transform="translate(-75 -92.35)"/></svg>
                             About
                         </a>
-<!-- I don't like mailto on desktop, so I looked for a different way. This article explains the main reaons why I dislike it, and provides the solution. https://adamsilver.io/blog/the-trouble-with-mailto-email-links-and-what-to-do-instead -->
-<!-- But this solution requires javascript, which I don't really want to get into right now. I will need to display a different menu for desktop anyway. So mailto works fine here.-->
                         <a id="contact" href="mailto:contact@kevd.design">
                             contact@kevd.design
                         </a> 
@@ -96,50 +93,122 @@ window.addEventListener('resize', () => {
     </a>
     </header>
     <main>
-        <h1 id="portfolio">Kev D's Portfolio</h1>
         <section>
-            <h2 class="moody">Moody Pops</h2>
-            <a class="preview" href="#">
+        <h2 id="portfolio">About Kev D.</h2> 
                 <picture> 
                     <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
-                    <source srcset="images/moody-fullscreen/MoodyPopsFullScreen-desktop@3x.jpg 3x,
-                                    images/moody-fullscreen/MoodyPopsFullScreen-desktop@2x.jpg 2x,
-                                    images/moody-fullscreen/MoodyPopsFullScreen-desktop.jpg                        
+                    <source srcset="images/about/Laalo_Z_10_Squared-2-desktop@3x.jpg 3x,
+                                    images/about/Laalo_Z_10_Squared-1-desktop@2x.jpg 2x,
+                                    images/about/Laalo_Z_10_Squared-desktop.jpg                        
                                     "
                             media="(min-width: 1280px)"/>
-                    <source srcset="images/moody-fullscreen/MoodyPopsFullScreen-tablet@3x.png 3x,
-                                    images/moody-fullscreen/MoodyPopsFullScreen-tablet@2x.png 2x,
-                                    images/moody-fullscreen/MoodyPopsFullScreen-tablet.png                            
+                    <source srcset="images/about/Laalo_Z_10_Squared-2-tablet@3x.jpg 3x,
+                                    images/about/Laalo_Z_10_Squared-1-tablet@2x.jpg 2x,
+                                    images/about/Laalo_Z_10_Squared-tablet.jpg                            
                                     "
                             media="(min-width: 768px)"/>
-                    <img srcset=    "images/moody-fullscreen/MoodyPopsFullScreen-mobile@3x.png 3x,
-                                    images/moody-fullscreen/MoodyPopsFullScreen-mobile@2x.png 2x,
+                    <img srcset=    "images/about/Laalo_Z_10_Squared-2-mobile@3x.jpg 3x,
+                                    images/about/Laalo_Z_10_Squared-1-mobile@2x.jpg 2x,
                                     "
-                        src="images/moody-fullscreen/MoodyPopsFullScreen-mobile.png"
-                                    alt="A full screen image of the Moody Pop's homepage."
+                        src="images/about/Laalo_Z_10_Squared-mobile.jpg"
+                                    alt="Kev. D. sitting cross-legged in front of some street art. He's wearing a winter coat, scarf and gloves and is smiling."
                             />
                 </picture>
-                <svg class="next-page" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-                    <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M32.563.563a32,32,0,1,1-32,32A31.994,31.994,0,0,1,32.563.563ZM28.833,19.092l9.742,9.342H15.014a3.089,3.089,0,0,0-3.1,3.1v2.065a3.089,3.089,0,0,0,3.1,3.1H38.575l-9.742,9.342a3.1,3.1,0,0,0-.052,4.426L30.2,51.866a3.084,3.084,0,0,0,4.374,0L51.7,34.756a3.084,3.084,0,0,0,0-4.374L34.575,13.246a3.084,3.084,0,0,0-4.374,0l-1.419,1.406a3.116,3.116,0,0,0,.052,4.439Z" transform="translate(-0.563 -0.563)" fill="#c62b70"/>
-                  </svg>       
-                
-            </a>
-            <div class="content-types">
-                <div class="content-icon">
-                    <img src="images/content-types/write-icon.svg" alt="An icon with a pencil.">
-                    <h4>Write</h4>
-                 </div>
-                <div class="content-icon">
-                    <img src="images/content-types/code-icon.svg" alt="Two chevrons and a slash to symbolize coding in an icon."> 
-                    <h4>Code</h4>
-                    <img class="includes-this" src="images/content-types/paint-swirl.svg" alt="An icon with a pencil.">                     
-                </div>
-                <div class="content-icon">
-                    <img src="images/content-types/design-icon.svg" alt="Two chevrons and a slash to symbolize coding in an icon.">
-                    <h4>Design</h4>
-                    <img class="includes-this" src="images/content-types/paint-swirl.svg" alt="An icon with a pencil.">                 
-                </div>
-            </div>
+                <p>Kev D. was born in Ottawa but he grew up in its countryside. Farm fields and forests were his playground. When he started to get older, towns and cities became his focus. By the time he was 18,  he moved to Westboro, Ottawa. After a brief stint in the military, he moved to Montreal in his early 20’s. It was here he was introduced to the Montreal tech industry.</p>
+                <p>
+                    Having reached his 30’s, his most recent employment was as a Technical Writer. Here, he began to be interested in design and making an impact. He learned the importance of the design thinking process as a writer. This role showed that consistent positive outcomes come process quality.
+                </p>
+                <p>Presently he is enrolled in Interactive Media Design at Algonquin College. </p>
+        </section>
+        
+            <h2>About this website</h2>
+            <div>
+            <section>
+            <h3>Golden ratio</h3>
+            <picture> 
+                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                <img srcset=    "images/about/Goldenratio2-2@3x.jpg 3x,
+                                images/about/Goldenratio2-1@2x.jpg 2x,
+                                "
+                    src="images/about/Goldenratio2.jpg"
+                                alt="The words 'Golden ratio' repeated. Each repeat is larger by the golden ratio. "
+                        />
+            </picture>
+            <p>Kev D used an XD plugin called Typescale to set up a golden ratio typography scale based on 16 pixels.</p>
+            <a href="https://typescale.io/">Typescale.io</a>
+        </div>
+        <div>
+            <section>
+            <h3>Font family</h3>
+            <picture> 
+                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                <img srcset=    "images/about/obviously-mobile@3x.png 3x,
+                                images/about/obviously-mobile@2x.png 2x,
+                                "
+                    src="images/about/obviously-mobile.png"
+                                alt="The word obviously, broken into three lines, colored red, blue, then yellow, respectively. In the 'Obviously!' font. "
+                        />
+            </picture>
+            <p>The font family is called Obviously, it's from Adobe Fonts. Headers are Narrow Semibold font, paragraphs are Regular font.</p>
+            <a href="https://fonts.adobe.com/fonts/obviously">Obviously Font</a>
+        </div>
+        <div>
+            <section>
+            <h3>Design</h3>
+            <picture> 
+                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                <img srcset=    "images/about/lo-fi2-2@3x.jpg 3x,
+                                images/about/lo-fi2-1@2x.jpg 2x,
+                                "
+                    src="images/about/lo-fi2.jpg"
+                                alt="A sketch of this website's concept. "
+                        />
+            </picture>
+            <p>This is the first iteration of Kev D's portfolio. It's influenced by modern portfolios.</p>
+            <a href="docs/kevd.design-concept.pdf">Concept (PDF)</a>
+        </div>
+        <div>
+            <section>
+            <h3>Mobile first</h3>
+            <picture> 
+                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                <img srcset=    "images/about/mobile-first-2@3x.png 3x,
+                                images/about/mobile-first-1@2x.png 2x,
+                                "
+                    src="images/about/mobile-first.png"
+                                alt="A screenshot of the mobile version of this website. "
+                        />
+            </picture>
+            <p>This website was coded to be responsive on any device size. This website was written in HTML and CSS by Kev D.</p>
+            <a href="https://github.com/dela0130/portfolio">GitHub repo</a>
+        </div>
+        </section>
+        <section>
+            <h2>About this logo</h2>
+            <picture> 
+                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                <source srcset="images/about/LogoProgression-2-desktop@3x.png 3x,
+                                images/about/LogoProgression-1-desktop@2x.png 2x,
+                                images/about/LogoProgression-desktop.png                        
+                                "
+                        media="(min-width: 1280px)"/>
+                <source srcset="images/about/LogoProgression-2-tablet@3x.png 3x,
+                                images/about/LogoProgression-1-tablet@2x.png 2x,
+                                images/about/LogoProgression-tablet.png                           
+                                "
+                        media="(min-width: 768px)"/>
+                <img srcset=    "images/about/LogoProgression-2-mobile@3x.png 3x,
+                                images/about/LogoProgression-1-mobile@2x.png 2x,
+                                "
+                    src="images/about/LogoProgression-mobile.png"
+                                alt="An image with four logos, scaling from smaller at the top to larger at the bottom. The logos closer to the top are older versions of the most recent logo at the bottom."
+                        />
+            </picture>
+            <p>The design process took about a week.  The final few iterations are shown here.</p>
+            <p>Other than “d.d”, which is the middle characters of the domain name,  three other elements are symbolic: a taskbar, a pencil, a face.  The blue curved rectangle or taskbar is a symbol of Kev D's preferred medium: technology, computers and the internet. The two smaller elements on the diagonal use closure, a gestalt principle to draw a pencil in your mind. This symbolizes Kev D's ability to write and design.
+            </p>
+            <p>The two D's and the pencil eraser creates a smiling face. This symbolizes the aim: a positive user experience.
+            </p>
         </section>
     </main>
     <footer>

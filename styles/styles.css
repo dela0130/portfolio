@@ -120,6 +120,7 @@ h4 {
 p {
 	font-size: 16px;
 	font-family: obviously, sans-serif;
+	font-weight: 400;
 }
 
 aside {
@@ -136,7 +137,7 @@ strong {
 				Header
 	
 `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
-/* Makes the header a full page and organizes the content within. With 'space-between', the next page button is forced to the bottom of the page. The header-banner would be pushed to the, if not for the large margin-top. */
+/* Makes the header a full page and organizes the content within. With 'space-between', the next page button is forced to the bottom of the page. The header-banner would be pushed to the top, if not for the large margin-top. */
 
 header {
 	height: 100vh;
@@ -146,23 +147,15 @@ header {
 	align-items: center;
 }
 
-/* A fixed height doesn't work well on mobile devices, so this removes it. */
-@media (hover:none) {
-	
-	header {
-		height: unset;
-	}
-}
-
-/* This positions the header banner in the right spot. */
+/* This positions the header banner closer to the center on a PC. */
 
 .header-banner {
 	margin-top: 200px;
 }
 
-/* This makes sure the next page button isn't pushed right against the bottom of the viewport. */
+/* This prevents the arrow from being forced right down to the bottom. */
 .next-screen {
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 }
 
 /* Animates the button press. */
@@ -183,6 +176,23 @@ header {
 	margin: -88px 0 0; /* negative fixed header height */
 }
 
+/* A fixed height doesn't work well on mobile devices, so this removes it. */
+@media (hover:none) {
+	
+	header {
+		height: unset;
+	}
+
+	/* The initial design makes it look like the next screen button will always appear near the bottom. Yet, it's very hard to tell where the next screen button will appear. */
+	.next-screen {
+		margin: 16px 0 64px;
+	}
+	/* This positions the header banner closer to the top on a mobile device, since there's less space to work with. */
+	.header-banner {
+		margin-top: 96px;
+	}
+
+}
 
 /* 	---------- Mobile Nav---------- */
 
