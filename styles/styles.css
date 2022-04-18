@@ -216,6 +216,16 @@ scroll-margin-top: 88px;
 
 }
 
+/* Formats the next-screen button, so the text is centred. */
+
+.next-screen-container {
+	display:flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+
+
 /* 	---------- Mobile Nav---------- */
 
 /* Nav from this responsive hamburger menu codepen: https://codepen.io/jo_Geek/pen/xgbaEr */
@@ -452,29 +462,28 @@ nav {
 
 /* Apparently transitions don't work on background gradients. SO, I found this solution that uses a pseudo-element: https://keithjgrant.com/posts/2017/07/transitioning-gradients/ */
 
-.moody-pops {
-	position:relative;
-	z-index:1;
+@media (hover:hover) {
+	.moody-pops {
+		position:relative;
+		z-index:1;
+	}
+	
+	.moody-pops::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+			/* Gradient created via a generator from: https://cssgradient.io/ */
+		background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(198,43,112,.4) 51%, rgba(255,255,255,1) 100%);
+		z-index: -1;
+		transition: all ease .5s;
+		opacity:0;
+	}
 }
 
-.moody-pops::before {
-	position: absolute;
-	content: "";
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-		/* Gradient created via a generator from: https://cssgradient.io/ */
-	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(198,43,112,.4) 51%, rgba(255,255,255,1) 100%);
-	z-index: -1;
-	transition: all ease .5s;
-	opacity:0;
-}
 
-.preview:active {
-		/* This makes sure the phone doesn't show it's default blue highlight when a link is tapped. Found on: https://stackoverflow.com/questions/21003535/ */
-	-webkit-tap-highlight-color: transparent;
-}
 
 .moody-pops:active::before, .moody-pops:hover::before {
 
@@ -509,11 +518,25 @@ nav {
 	transition: all ease .5s;
 }
 
+/* Transitions and the background do not look good on mobile, so I'm adjusting them here. Instead, the image and arrow is fully opaque, with no background. */
+
 @media (hover:none) {
 	.moody-pops:hover .content-types, .moody-pops:hover path, .moody-pops:active img, .moody-pops:hover img, .moody-pops, .moody-pops path, 
 	.moody-pops .content-types, .moody-pops::before, .preview img {
 		transition: unset;
-	} 
+	}
+
+	.preview img {
+		opacity: 1;
+	}
+	.next-page path {
+		fill: #c62b70;
+	}
+}
+
+.preview:active {
+	/* This makes sure the phone doesn't show it's default blue highlight when a link is tapped. Found on: https://stackoverflow.com/questions/21003535/ */
+-webkit-tap-highlight-color: transparent;
 }
 
 /* This aligns the arrow in the center of the vertical space created by the size of the image. It also aligns the button away from the right margin. */
