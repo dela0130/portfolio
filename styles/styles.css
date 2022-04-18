@@ -159,9 +159,10 @@ header {
 	margin-bottom: 16px;
 }
 
-/* Animates the button press. */
-.next-screen:active {
+/* Grows the button press of the logo and the next page. */
+.next-screen:active, .logo:active, .nav-links a:active {
 	transform: scale(1.3, 1.3);
+	/* This makes sure the phone doesn't show it's default blue highlight when a link is tapped. Found on: https://stackoverflow.com/questions/21003535/ */
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -451,6 +452,11 @@ nav {
 	opacity:0;
 }
 
+.preview:active {
+		/* This makes sure the phone doesn't show it's default blue highlight when a link is tapped. Found on: https://stackoverflow.com/questions/21003535/ */
+	-webkit-tap-highlight-color: transparent;
+}
+
 .moody-pops:active::before, .moody-pops:hover::before {
 
 	opacity: 1;
@@ -543,16 +549,26 @@ footer {
 	text-align: center;
 	margin-bottom: 16px;
 }
+
+.link:active {
+		/* This makes sure the phone doesn't show it's default blue highlight when a link is tapped. Found on: https://stackoverflow.com/questions/21003535/ */
+		-webkit-tap-highlight-color: transparent;
+		transform: scale(1.3, 1.3);
+}
+
 .go-top {
 	display: flex;
 	align-items: center;
 	justify-content: end;
 	margin: 32px 16px;
 	text-decoration: unset;
+	/* This makes sure the phone doesn't show it's default blue highlight when a link is tapped. Found on: https://stackoverflow.com/questions/21003535/ */
+	-webkit-tap-highlight-color: transparent;
 }
 
-.top-btn:active {
+.go-top:active .top-btn {
 	transform: scale(1.3, 1.3);
+
 }
 
 .top-btn:hover svg path {
