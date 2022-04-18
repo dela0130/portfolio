@@ -509,6 +509,13 @@ nav {
 	transition: all ease .5s;
 }
 
+@media (hover:none) {
+	.moody-pops:hover .content-types, .moody-pops:hover path, .moody-pops:active img, .moody-pops:hover img, .moody-pops, .moody-pops path, 
+	.moody-pops .content-types, .moody-pops::before, .preview img {
+		transition: unset;
+	} 
+}
+
 /* This aligns the arrow in the center of the vertical space created by the size of the image. It also aligns the button away from the right margin. */
 .preview svg {
 	align-self: center;
