@@ -35,7 +35,7 @@ window.addEventListener('resize', () => {
         <nav>
         <div class="nav">
             <input type="checkbox"  id="nav-check">
-            <a href="index.html">
+            <a class="logo" href="index.html">
                 <picture> 
                     <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
                     <source srcset="images/logo/wide-352-3x.png 3x,
@@ -93,7 +93,7 @@ window.addEventListener('resize', () => {
     </a>
     </header>
     <main>
-        <section>
+        <section class="feature">
         <h2 id="portfolio">About Kev D.</h2> 
                 <picture> 
                     <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
@@ -114,81 +114,89 @@ window.addEventListener('resize', () => {
                                     alt="Kev. D. sitting cross-legged in front of some street art. He's wearing a winter coat, scarf and gloves and is smiling."
                             />
                 </picture>
-                <p>Kev D. was born in Ottawa but he grew up in its countryside. Farm fields and forests were his playground. When he started to get older, towns and cities became his focus. By the time he was 18,  he moved to Westboro, Ottawa. After a brief stint in the military, he moved to Montreal in his early 20’s. It was here he was introduced to the Montreal tech industry.</p>
+                <p>Kev D. was born in Ottawa but he grew up in its countryside. Farm fields and forests were his playground. When he started to get older, towns and cities became his focus. By the time he was 18,  he moved to Westboro, Ottawa. After a brief stint in the military, he moved to Montreal in his early 20's. It was here he was introduced to the Montreal tech industry.</p>
                 <p>
-                    Having reached his 30’s, his most recent employment was as a Technical Writer. Here, he began to be interested in design and making an impact. He learned the importance of the design thinking process as a writer. This role showed that consistent positive outcomes come process quality.
+                    Having reached his 30's, his most recent employment was as a Technical Writer. Here, he began to be interested in design and making an impact. He learned the importance of the design thinking process as a writer. This role showed that consistent positive outcomes come process quality.
                 </p>
                 <p>Presently he is enrolled in Interactive Media Design at Algonquin College. </p>
         </section>
-        
+        <section class="details">
             <h2>About this website</h2>
-            <div>
-            <section>
-            <h3>Golden ratio</h3>
-            <picture> 
-                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
-                <img srcset=    "images/about/Goldenratio2-2@3x.jpg 3x,
-                                images/about/Goldenratio2-1@2x.jpg 2x,
-                                "
-                    src="images/about/Goldenratio2.jpg"
-                                alt="The words 'Golden ratio' repeated. Each repeat is larger by the golden ratio. "
-                        />
-            </picture>
-            <p>Kev D used an XD plugin called Typescale to set up a golden ratio typography scale based on 16 pixels.</p>
-            <a href="https://typescale.io/">Typescale.io</a>
-        </div>
-        <div>
-            <section>
-            <h3>Font family</h3>
-            <picture> 
-                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
-                <img srcset=    "images/about/obviously-mobile@3x.png 3x,
-                                images/about/obviously-mobile@2x.png 2x,
-                                "
-                    src="images/about/obviously-mobile.png"
-                                alt="The word obviously, broken into three lines, colored red, blue, then yellow, respectively. In the 'Obviously!' font. "
-                        />
-            </picture>
-            <p>The font family is called Obviously, it's from Adobe Fonts. Headers are Narrow Semibold font, paragraphs are Regular font.</p>
-            <a href="https://fonts.adobe.com/fonts/obviously">Obviously Font</a>
-        </div>
-        <div>
-            <section>
-            <h3>Design</h3>
-            <picture> 
-                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
-                <img srcset=    "images/about/lo-fi2-2@3x.jpg 3x,
-                                images/about/lo-fi2-1@2x.jpg 2x,
-                                "
-                    src="images/about/lo-fi2.jpg"
-                                alt="A sketch of this website's concept. "
-                        />
-            </picture>
-            <p>This is the first iteration of Kev D's portfolio. It's influenced by modern portfolios.</p>
-            <a href="docs/kevd.design-concept.pdf">Concept (PDF)</a>
-        </div>
-        <div>
-            <section>
-            <h3>Mobile first</h3>
-            <picture> 
-                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
-                <img srcset=    "images/about/mobile-first-2@3x.png 3x,
-                                images/about/mobile-first-1@2x.png 2x,
-                                "
-                    src="images/about/mobile-first.png"
-                                alt="A screenshot of the mobile version of this website. "
-                        />
-            </picture>
-            <p>This website was coded to be responsive on any device size. This website was written in HTML and CSS by Kev D.</p>
-            <a href="https://github.com/dela0130/portfolio">GitHub repo</a>
-        </div>
+            <div class="section-container">
+                <!-- Here based on this article, I believe I am using the nested <section> elements correctly. I WOULD indicate these inside an outline, as they are individual comments about the main section. Each DO have their own header elements as children. http://html5doctor.com/the-section-element/ -->
+                <section>
+                    <h3>Golden ratio</h3>
+                    <div class="subsection">
+                        <picture> 
+                            <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                            <img srcset=    "images/about/Goldenratio2-2@3x.jpg 3x,
+                                            images/about/Goldenratio2-1@2x.jpg 2x,
+                                            "
+                                src="images/about/Goldenratio2.jpg"
+                                        alt="The words 'Golden ratio' repeated. Each repeat is larger by the golden ratio. "
+                                />
+                        </picture>
+                        <p>Kev D used an XD plugin called Typescale to set up a golden ratio typography scale based on 16 pixels.</p>
+                        <a class="link" href="https://typescale.io/">Typescale.io</a>
+                    </div>
+                </section>
+                <section>
+                    <h3>Font family</h3>
+                    <div class="subsection">
+                        <picture> 
+                            <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                            <img srcset=    "images/about/obviously-mobile@3x.png 3x,
+                                    images/about/obviously-mobile@2x.png 2x,
+                                    "
+                            src="images/about/obviously-mobile.png"
+                                    alt="The word obviously, broken into three lines, colored red, blue, then yellow, respectively. In the 'Obviously!' font. "
+                            />
+                        </picture>
+                        <p>The font family is called Obviously, it's from Adobe Fonts. Headers are Narrow Semibold font, paragraphs are Regular font.</p>
+                        <a class="link" href="https://fonts.adobe.com/fonts/obviously">Obviously Font</a>
+                    </div>
+                </section>
+                <section>
+                    <h3>Design</h3>
+                    <div class="subsection">
+                        <picture> 
+                            <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                            <img srcset=    "images/about/lo-fi2-2@3x.jpg 3x,
+                                    images/about/lo-fi2-1@2x.jpg 2x,
+                                    "
+                            src="images/about/lo-fi2.jpg"
+                                    alt="A sketch of this website's concept. "
+                            />
+                        </picture>
+                        <p>This is the first iteration of Kev D's portfolio. It's influenced by modern portfolios.</p>
+                        <a class="link" href="docs/kevd.design-concept.pdf">Concept (PDF)</a>
+                    </div>
+                </section>
+                <section>
+                    <h3>Mobile first</h3>
+                    <div class="subsection">
+                        <picture> 
+                            <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                            <img srcset=    "images/about/mobile-first-2@3x.png 3x,
+                                    images/about/mobile-first-1@2x.png 2x,
+                                    "
+                                src="images/about/mobile-first.png"
+                                    alt="A screenshot of the mobile version of this website. "
+                            />
+                        </picture>
+                        <p>This website was coded to be responsive on any device size. This website was written in HTML and CSS by Kev D.</p>
+                        <a class="link" href="https://github.com/dela0130/portfolio">GitHub repo</a>
+                    </div>
+                </section>
+            </div>
         </section>
         <section>
             <h2>About this logo</h2>
-            <picture> 
-                <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
-                <source srcset="images/about/LogoProgression-2-desktop@3x.png 3x,
-                                images/about/LogoProgression-1-desktop@2x.png 2x,
+            <div class="feature halfimg">
+                <picture> 
+                    <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                    <source srcset="images/about/LogoProgression-2-desktop@3x.png 3x,
+                                    images/about/LogoProgression-1-desktop@2x.png 2x,
                                 images/about/LogoProgression-desktop.png                        
                                 "
                         media="(min-width: 1280px)"/>
@@ -203,17 +211,18 @@ window.addEventListener('resize', () => {
                     src="images/about/LogoProgression-mobile.png"
                                 alt="An image with four logos, scaling from smaller at the top to larger at the bottom. The logos closer to the top are older versions of the most recent logo at the bottom."
                         />
-            </picture>
-            <p>The design process took about a week.  The final few iterations are shown here.</p>
-            <p>Other than “d.d”, which is the middle characters of the domain name,  three other elements are symbolic: a taskbar, a pencil, a face.  The blue curved rectangle or taskbar is a symbol of Kev D's preferred medium: technology, computers and the internet. The two smaller elements on the diagonal use closure, a gestalt principle to draw a pencil in your mind. This symbolizes Kev D's ability to write and design.
-            </p>
-            <p>The two D's and the pencil eraser creates a smiling face. This symbolizes the aim: a positive user experience.
-            </p>
+                </picture>
+                <p>The design process took about a week.  The final few iterations are shown here.</p>
+                <p>Other than “d.d”, which is the middle characters of the domain name,  three other elements are symbolic: a taskbar, a pencil, a face.  The blue curved rectangle or taskbar is a symbol of Kev D's preferred medium: technology, computers and the internet. The two smaller elements on the diagonal use closure, a gestalt principle to draw a pencil in your mind. This symbolizes Kev D's ability to write and design.
+                </p>
+                <p>The two D's and the pencil eraser creates a smiling face. This symbolizes the aim: a positive user experience.
+                </p>
+            </div>
         </section>
     </main>
     <footer>
         <address>
-            <a class="link" href="mailto:contact@kevd.design">contact@kevd.design</a>
+            <a class="biglink" href="mailto:contact@kevd.design">contact@kevd.design</a>
         </address>
         <a href="#top" class="go-top">
             <div class="top-text">Top</div>
