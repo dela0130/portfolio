@@ -428,9 +428,6 @@ nav {
 	transition: all ease .5s;
 }
 
-
-
-
 /* Apparently transitions don't work on background gradients. SO, I found this solution that uses a pseudo-element: https://keithjgrant.com/posts/2017/07/transitioning-gradients/ */
 
 .moody-pops {
@@ -448,7 +445,7 @@ nav {
 		/* Gradient created via a generator from: https://cssgradient.io/ */
 	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(198,43,112,.4) 51%, rgba(255,255,255,1) 100%);
 	z-index: -1;
-	transition: all linear .5s;
+	transition: all ease .5s;
 	opacity:0;
 }
 
