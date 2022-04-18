@@ -35,7 +35,7 @@ window.addEventListener('resize', () => {
         <nav>
         <div class="nav">
             <input type="checkbox"  id="nav-check">
-            <a href="index.html">
+            <a class="logo" href="index.html">
                 <picture> 
                     <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
                     <source srcset="images/logo/wide-352-3x.png 3x,
@@ -70,7 +70,7 @@ window.addEventListener('resize', () => {
                             Portfolio
                         </a>
 
-                        <a href="#">
+                        <a href="about.html">
                             About
                         </a>
                         <a id="contact" href="mailto:contact@kevd.design">
@@ -85,12 +85,151 @@ window.addEventListener('resize', () => {
         <p class="subtitle">Kev D's first webpage design was brought to life during a html programming midterm.</p>
     </div>
 
-    <a class="next-screen" href="#portfolio"> 
+    <a class="next-screen" href="#next"> 
         <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
             <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M32.562.563a32,32,0,1,1-32,32A31.994,31.994,0,0,1,32.562.563ZM28.833,19.092l9.742,9.342H15.014a3.089,3.089,0,0,0-3.1,3.1v2.065a3.089,3.089,0,0,0,3.1,3.1H38.575l-9.742,9.342a3.1,3.1,0,0,0-.052,4.426L30.2,51.866a3.084,3.084,0,0,0,4.374,0L51.7,34.756a3.084,3.084,0,0,0,0-4.374L34.575,13.246a3.084,3.084,0,0,0-4.374,0l-1.419,1.406A3.116,3.116,0,0,0,28.833,19.092Z" transform="translate(64.563 -0.563) rotate(90)" fill="#a63b51"/>
           </svg>
     </a>
     </header>
-    
-    <!-- INSERT STARTING MAIN TO END. -->
+    <main>
+        <h2 id="next" class="anchor-fix">Simple start</h2> 
+        <section class="feature">
+                <picture> 
+                    <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                    <source srcset="images/moody-pops/MoodyPopsFullScreen_extraOrig-2-desktop@3x.jpg 3x,
+                                    images/moody-pops/MoodyPopsFullScreen_extraOrig-1-desktop@2x.jpg 2x,
+                                    images/moody-pops/MoodyPopsFullScreen_extraOrig-desktop.jpg                        
+                                    "
+                            media="(min-width: 1280px)"/>
+                    <source srcset="images/moody-pops/      MoodyPopsFullScreen_extraOrig-2-tablet@3x.png 3x,
+                                    images/moody-pops/MoodyPopsFullScreen_extraOrig-1-tablet@2x.png 2x,
+                                    images/moody-pops/MoodyPopsFullScreen_extraOrig-tablet.png                            
+                                    "
+                            media="(min-width: 768px)"/>
+                    <img srcset=    "images/moody-pops/MoodyPopsFullScreen_extraOrig-2-mobile@3x.png 3x,
+                                    images/moody-pops/MoodyPopsFullScreen_extraOrig-1-mobile@2x.png 2x,
+                                    "
+                        src="images/moody-pops/MoodyPopsFullScreen_extraOrig-mobile.png"
+                                    alt="The top banner of the Moody Pops website, that says 'A pop for every mood'"
+                            />
+                </picture>
+                <p>For the final project in the first semester, Kev D was required to create a website for a hypothetical customer who was a cake pop baker. The design thinking process was simulated based on a brief description of the entrepreneur's needs. This website design was a part of the final submission. Once submitted, Moody Pops was put to bed. </p>
+                <p>
+                    During his second semester midterm project, another assignment forced the resurrection of Moody Pops. The midterm project required him to code a website to match the design using HTML and CSS. The trick was to also make it responsive and interactive. You can see the code <a href="https://github.com/dela0130/mtm6201-midterm">here on Kev. D's GitHub account.</a> Check out his code, he left comments. Now Moody Pops is immortal!
+                </p>
+                <a class="link" href="https://dela0130.github.io/mtm6201-midterm/">Visit Moody Pops - Live</a>
 
+        </section>
+        <section class="details">
+            <h2>Pop-ular Specifics</h2>
+            <div class="section-container">
+                <!-- Here based on this article, I believe I am using the nested <section> elements correctly. I WOULD indicate these inside an outline, as they are individual comments about the main section. Each DO have their own header elements as children. http://html5doctor.com/the-section-element/ -->
+                <section>
+                    <h3>Responsive</h3>
+                    <div class="subsection">
+                        <picture> 
+                            <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                            <img srcset=    "images/moody-pops/Responsive-2@3x.png 3x,
+                                        images/moody-pops/Responsive-2@3x.png 2x,
+                                            "
+                                src="images/moody-pops/Responsive.png"
+                                        alt="A screen capture of the mobile navigation on the Moody Pops website."
+                                />
+                        </picture>
+                        <p>The site is coded to scale to fit any screen. A pure CSS nav menu was created for smaller screens.</p>
+                    </div>
+                </section>
+                <section>
+                    <h3>First final</h3>
+                    <div class="subsection">
+                        <picture > 
+                            <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                            <img class="dropshadow" srcset=    "images/moody-pops/FinalAssignment-2@3x.png 3x,
+                                images/moody-pops/FinalAssignment-2@3x.png 2x,
+                                    "
+                            src="images/moody-pops/FinalAssignment.png"
+                                    alt="A document that looks like a report, with the title saying, Moody Pops."
+                            />
+                        </picture>
+                        <p>The final was a challenge, but Kev D. checked all the boxes.</p>
+                        <a class="link" href="docs/DelahuntA02_reduced.pdf">Moody Pops Semester 1 Final Assignment (PDF)</a>
+                    </div>
+                </section>
+                <section>
+                    <h3>Challenges</h3>
+                    <div class="subsection">
+                        <picture> 
+                            <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                            <img srcset=    "images/moody-pops/sad-pop-2@3x.png 3x,
+                                images/moody-pops/sad-pop-1@2x.png 2x,
+                                    "
+                            src="images/moody-pops/sad-pop.png"
+                                    alt="A three dimensional cake pop on a stick. A sad face is drawn on it. "
+                            />
+                        </picture>
+                        <p>The main challenge was making the images responsive. Kev D. felt like he made far too many images to ensure image responsiveness. Today, he's more used to it.</p>
+                    </div>
+                </section>
+                <section>
+                    <h3>Real life?</h3>
+                    <div class="subsection">
+                        <picture> 
+                            <!-- Followed these instructions to get this working: https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#aa-combining-source-and-srcset-->
+                            <img srcset=    "images/moody-pops/RealLife-2@3x.png 3x,
+                                    images/moody-pops/RealLife-1@2x.png 2x,
+                                    "
+                                src="images/moody-pops/RealLife.png"
+                                    alt="Eight cake pops fanned out in a circle, sticks inside. Each cake pop has a different facial expression from happy to sad."
+                            />
+                        </picture>
+                        <p>Could a cake pop only bakery actually work? Kev D. estimated the viability to stay inspired. A shop would need to sell 5000 cake pops per month, on average. How many would you buy?</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <address>
+            <a class="biglink" href="mailto:contact@kevd.design">contact@kevd.design</a>
+        </address>
+        <a href="#top" class="go-top">
+            <div class="top-text">Top</div>
+            <div class="top-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+                    <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M32.562.563a32,32,0,1,1-32,32A31.994,31.994,0,0,1,32.562.563ZM28.833,19.092l9.742,9.342H15.014a3.089,3.089,0,0,0-3.1,3.1v2.065a3.089,3.089,0,0,0,3.1,3.1H38.575l-9.742,9.342a3.1,3.1,0,0,0-.052,4.426L30.2,51.866a3.084,3.084,0,0,0,4.374,0L51.7,34.756a3.084,3.084,0,0,0,0-4.374L34.575,13.246a3.084,3.084,0,0,0-4.374,0l-1.419,1.406A3.116,3.116,0,0,0,28.833,19.092Z" transform="translate(-0.563 64.562) rotate(-90)" fill="#1f5673"/>
+                  </svg>
+                  
+                </div>
+        </a>
+        <aside>
+            &copy; Copyright - 2022 - Kevin Delahunt
+        </aside>
+    </footer>
+
+<script>
+
+// This is used to make sure the keyboard is able to control the mobile nav menu. For when users are using a narrow screen, on a PC. From: http://www.ashleysheridan.co.uk/blog/Making+an+Accessible+Hamburger+Menu#
+
+    var menuToggle = document.querySelector("#menu-toggle");
+var menu = document.querySelector("#nav-check");
+
+var enterKeyCode = 13;
+var spaceKeyCode = 32;
+
+menuToggle.addEventListener("keyup", function(event) {
+    if(event.keyCode == enterKeyCode || event.keyCode == spaceKeyCode) {
+        var menuOpen = menu.checked;
+
+        if(menuOpen) {
+            menu.checked = false;
+        } else {
+            menu.checked = true;
+        }
+    }
+});
+</script>
+
+
+</body>
+
+</html>

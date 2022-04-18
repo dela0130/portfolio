@@ -110,13 +110,15 @@ h2 {
 h3 {
 	font-size: 25.89px;
 	font-weight: 600;
-	margin:0 8px 0 8px;
+	margin:0 8px 0 8px;	
+	line-height: 40px;
 }
 
 h4 {
 	font-size: 16px;
 	font-weight: 600;
 	margin-bottom: 8px;
+
 }
 
 
@@ -125,6 +127,7 @@ p {
 	font-family: obviously, sans-serif;
 	font-weight: 400;
 	margin: 24px 16px 16px 8px;
+	line-height: 28px;
 }
 
 aside {
@@ -135,6 +138,22 @@ aside {
 strong {
 	color: #A63B51;
 }
+
+a {
+	color:#a63b51;
+}
+
+/* I'm branding these, and making sure to include this. I want my links to stand out, so I'm using red. But I also don't want users to go in circles, so I am adding an alternate colour. I'm a bit concerned that blue for visited contrasts with the current mental model, which is blue for unvisited.
+
+Perhaps different style choices could be considered in the future.
+
+This article convinced me to keep the :visited styling: https://www.nngroup.com/articles/change-the-color-of-visited-links/*/
+a:visited {
+	
+	color:#1f5673;
+}
+
+
 
 /*  `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````                                   
 
@@ -178,7 +197,6 @@ header {
 .anchor-fix {
 scroll-margin-top: 88px;
 }
-
 
 /* A fixed height doesn't work well on mobile devices, so this removes for the header. */
 @media (hover:none) {
@@ -323,9 +341,9 @@ nav {
 	color:#A63B51;
 }
 
-/* Formats the contact link */
+/* Formats the contact link black on hover, focus or active in BOTH the menu and the one in the footer! */
 
-#contact:hover, #contact:focus, #contact:active  {
+#contact:hover, #contact:focus, #contact:active, .biglink:hover, .biglink:focus, .biglink:active  {
 	color:#000;
 }
 
@@ -548,6 +566,10 @@ section {
 
 .halfimg, .subsection {
 	align-items: center;
+}
+
+.dropshadow {
+	box-shadow: 0 3px 6px #000;
 }
 
 /* ---- Footer --- */
