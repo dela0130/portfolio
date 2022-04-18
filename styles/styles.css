@@ -169,20 +169,18 @@ header {
 	-webkit-tap-highlight-color: transparent;
 }
 
-/* Makes the icon black on either a hover or button press. */
+/* Makes the icon blue on either a hover or button press. */
 .next-screen:hover svg #Icon_awesome-arrow-circle-right, .next-screen:active svg #Icon_awesome-arrow-circle-right{
 	fill: #1f5673;
 }
 
-/* Due to the fixed header, this is required to make sure the next-screen anchor links to the correct place. */
-#portfolio:target::before {
-	content: "";
-	display: block;
-	height: 88px; /* fixed header height*/
-	margin: -88px 0 0; /* negative fixed header height */
+/* Due to the fixed header, this is required to make sure the next-screen anchor links to the correct place. Thank you gomakethings.com: https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/*/
+.anchor-fix {
+scroll-margin-top: 88px;
 }
 
-/* A fixed height doesn't work well on mobile devices, so this removes it. */
+
+/* A fixed height doesn't work well on mobile devices, so this removes for the header. */
 @media (hover:none) {
 	
 	header {
