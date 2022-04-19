@@ -58,7 +58,8 @@ table {
 
 html {
 	scroll-behavior: smooth;
-
+	max-width: 1281px;
+	margin: 0 auto;
 }
 /* Disable smooth scrolling when users have prefers-reduced-motion enabled
 */
@@ -394,8 +395,10 @@ nav {
   .nav > #nav-check {
 	display: none;
   }
-
-
+/* Removes the wider 1280px + nav contact option */
+  #contact2, #contact3, .desktop-nav-swirl {
+	display: none;
+}
 
 /* ------ red-circle-navigation-selector-swirl -------- */
 
@@ -443,6 +446,7 @@ nav {
 /* The moody section has it's own font color: */
 .moody {
 	color: #C62B70;
+	fill:#C62B70;
 }
 
 /* This aligns the arrow and image in the same line, forcing them apart on the screen. And it adds some spacing at the top. */
@@ -670,7 +674,7 @@ aside {
 }
 /*  `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````                                       
 
-				Gettin' bigger
+				Gettin' wider
 	
 `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
 
@@ -800,21 +804,73 @@ aside {
 
 @media only screen and (min-width: 1280px) {
 
-	.nav > .nav-btn {
+	nav {
+		position:unset;
+		height:unset;
+	}
+
+	.nav-btn {
 		display: none;
 	  }
 	  	  
-	  .nav > .nav-links > a {
-		display: inline-block;
-		padding: 13px 10px 13px 10px;
-		text-decoration: none;
-		color: #efefef;
-	  }
-	  
-	  .nav > .nav-links > a:hover {
-		background-color: rgba(0, 0, 0, 0.3);
-	  }
+	.nav > .nav-links {
+		position: static;
+		height: unset;
 
+}
+
+.nav > .nav-links > a {
+	width: unset;
+	
+}
+.nav > #nav-check:not(:checked) ~ .nav-links {
+	  flex-direction: row;
+	  justify-content: end;
+	  margin-left: 500px;
+	 
+}
+
+#contact {
+	display:none;
+	
+}
+
+.nav-links a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 250px;
+	flex: 1 1 auto;
+
+}
+
+#contact2 { 
+	display:block;
+	position: fixed;
+	color:#A63B51;
+	top: 125px;
+}
+
+#contact3 { 
+	display:block;
+	opacity: 0;
+	cursor:default;
+}
+
+.selector, .b {
+	display: none;
+}
+
+.nav > #nav-check:checked ~ .nav-links > a > svg > .b {
+	display: none;
+}
+
+.desktop-nav-swirl {
+	display: block;
+	position: absolute;
+	top: 60px;
+	width: 120px;
+}
 
 	.display {
 		font-size: 287.11px;
@@ -843,6 +899,7 @@ aside {
 
 	nav {
 		font-size: 25.89px;
+		line-height: 28px;
 	}
 
 	.link {
@@ -861,51 +918,3 @@ aside {
 	}
 }
 
-
-@media only screen and (min-width: 1920px) {
-	.display {
-		font-size: 430.61px;
-		font-weight: 600;
-	}
-
-	.subtitle {
-		font-size: 101.66px;
-		font-weight: 400;
-		
-	}
-
-	h1{
-		font-size: 266.14px;
-		font-weight: 600;
-	}
-
-	h2 {
-		font-size: 200px;
-		font-weight: 600;
-	}
-
-	h3 {
-		font-size: 101.66px;
-		font-weight: 600;
-	}
-
-	h4 {
-		font-size: 62.83px;
-		font-weight: 600;
-	}
-
-	h5, nav {
-		font-size: 38.83px;
-		font-weight: 400;
-	}
-
-	p {
-		font-size: 24px;
-		font-family: obviously, sans-serif;
-	}
-
-	aside {
-		font-size: 14.83px;
-		font-weight: 400;
-	}
-}
