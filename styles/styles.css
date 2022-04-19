@@ -774,7 +774,7 @@ aside {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 32px;
+		gap: 64px;
 	}
 
 	.details .section-container section:nth-child(even) .subsection {
@@ -787,11 +787,13 @@ aside {
 	}
 
 	.details .section-container section .subsection picture {
-		flex-basis: 100%;
+		flex-basis: 70%;
+		margin: 0 32px;
 	}
 
 	.details .section-container section .subsection picture img {
 		max-width: 100%;
+		
 	}
 
 }
