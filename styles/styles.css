@@ -91,7 +91,7 @@ body {
 	font-size: 25.89px;
 	font-weight: 400;
 	text-align: right;
-	margin:24px 12px 80px 32px;
+	margin:24px 12px 80px 80px;
 
 }
 
@@ -452,6 +452,8 @@ nav {
 	margin-top: 8px;
 }
 
+
+
 /* This makes the image faded normally, and provides some drop shadow. */
 .preview img {
 	opacity: .4;
@@ -460,7 +462,11 @@ nav {
 	transition: all ease .5s;
 }
 
-/* Apparently transitions don't work on background gradients. SO, I found this solution that uses a pseudo-element: https://keithjgrant.com/posts/2017/07/transitioning-gradients/ */
+.preview img {
+	margin-left: 8px;
+}
+
+/* Transitions don't work on background gradients. SO, I found this solution that uses a pseudo-element: https://keithjgrant.com/posts/2017/07/transitioning-gradients/ */
 
 @media (hover:hover) {
 	.moody-pops {
@@ -481,14 +487,10 @@ nav {
 		transition: all ease .5s;
 		opacity:0;
 	}
-}
 
-
-
-.moody-pops:active::before, .moody-pops:hover::before {
-
+	.moody-pops:active::before, .moody-pops:hover::before {
 	opacity: 1;
-
+	}
 }
 
 /* This smooths the transiton back to the initial state. */
@@ -679,26 +681,32 @@ aside {
 	.display {
 		font-size: 177.45px;
 		font-weight: 600;
+		margin-left: 32px;
 	}
 
 	.subtitle {
 		font-size: 41.89px;
 		font-weight: 400;
+		margin: 0 32px 0 192px;
+		
 	}
 
 	h1{
 		font-size: 109.67px;
 		font-weight: 600;
+		margin-left: 32px;
 	}
 
 	h2 {
 		font-size: 67.78px;
 		font-weight: 600;
+		margin-left: 32px;
 	}
 
 	h3 {
 		font-size: 41.89px;
 		font-weight: 600;
+		margin: 16px 0 16px 32px;
 	}
 
 	h4 {
@@ -711,19 +719,85 @@ aside {
 	}
 
 	.link {
-		font-size: 41.89px;
+		font-size: 25.89px;
 		color: #A63B51;
 		font-weight: 400;
+		text-align: left;
+		margin-left: 32px;
 	}
 
 	p {
 		font-size: 16px;
 		font-family: obviously, sans-serif;
+		line-height: 40px;
+		margin-left: 32px;
 	}
 
 	aside {
 		font-size: 9.89px;
 		font-weight: 400;
+	}
+
+	.nav {
+		margin: 16px 32px 0 32px;
+	}
+
+	.preview img {
+		margin: 0 32px;
+	}
+	.next-page {
+		margin-right: 64px;
+	}
+
+	footer {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	footer aside {
+		margin-bottom:0px;
+	}
+
+	.selector {
+	
+		top: -200%;
+		left: 10px;
+		width:90%;
+	}
+
+	.details {
+		margin-right: 24px;
+	}
+
+	.details .section-container section .subsection {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 32px;
+	}
+
+	.details .section-container section:nth-child(even) .subsection {
+	flex-direction: row;
+
+	}
+
+	.details .section-container section:nth-child(odd) .subsection {
+	flex-direction: row-reverse;
+	}
+
+	.details .section-container section .subsection picture {
+		flex-basis: 100%;
+	}
+
+	.details .section-container section .subsection picture img {
+		max-width: 100%;
+	}
+
+
+
+	.details .section-container section .subsection p, .details .section-container section .subsection a {
+
 	}
 }
 
