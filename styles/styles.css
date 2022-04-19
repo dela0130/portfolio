@@ -804,6 +804,25 @@ aside {
 
 @media only screen and (min-width: 1280px) {
 
+body {
+	box-shadow: 0 3px 6px #000;
+	margin: 20px 0;
+}
+
+header {
+	height: unset;
+}
+
+.nav {
+
+	margin: 16px 64px 0 64px;
+
+}
+
+.header-banner {
+	margin-top: unset;
+}
+
 	nav {
 		position:unset;
 		height:unset;
@@ -826,7 +845,7 @@ aside {
 .nav > #nav-check:not(:checked) ~ .nav-links {
 	  flex-direction: row;
 	  justify-content: end;
-	  margin-left: 500px;
+	  margin-left: 400px;
 	 
 }
 
@@ -848,7 +867,7 @@ aside {
 	display:block;
 	position: fixed;
 	color:#A63B51;
-	top: 125px;
+	top: 145.5px;
 }
 
 #contact3 { 
@@ -872,6 +891,65 @@ aside {
 	width: 120px;
 }
 
+.next-screen-container {
+	display:none;
+}
+
+.header-banner, h1 {
+	margin-right: 256px;
+}
+
+.content-types {
+	display:flex;
+	justify-content:flex-start;
+	margin: -20px 24px 0 128px;
+}
+
+.preview {
+	margin-left: 64px;
+}
+.next-page {
+	display:none;
+}
+
+.feature {
+	display: flex;
+	flex-direction: row;
+	margin-right: 256px;
+	align-items: center;
+	
+}
+.feature picture {
+	flex-basis: 500%;
+	margin: 64px 0 64px 0;
+}
+
+.feature picture img {
+	max-width: 100%;
+	
+}
+
+.details {
+	margin-right: 256px;
+}
+
+.section-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.details .section-container section .subsection {
+	gap: 0px;
+}
+.details .section-container section:nth-child(odd) .subsection {
+	flex-direction: row;
+	}
+
+.details .section-container section .subsection picture {
+	flex-basis: 200%;
+	margin: 0
+}
 	.display {
 		font-size: 287.11px;
 		font-weight: 600;
@@ -880,21 +958,28 @@ aside {
 	.subtitle {
 		font-size: 67.78px;
 		font-weight: 400;
+		line-height: 62px;
+		margin-bottom: 32px;
 	}
 
 	h1{
 		font-size: 177.45px;
 		font-weight: 600;
+		margin-top: 96px;
+		margin-left: 64px;
 	}
 
 	h2 {
 		font-size: 109.67px;
+		margin-left: 64px;
+		margin-bottom: 32px;
 		font-weight: 600;
 	}
 
 	h3 {
 		font-size: 67.78px;
 		font-weight: 600;
+		margin: 112px 0;
 	}
 
 	nav {
@@ -910,6 +995,7 @@ aside {
 	p {
 		font-size: 16px;
 		font-family: obviously, sans-serif;
+		line-height: 30px;
 	}
 
 	aside {
