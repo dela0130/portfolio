@@ -13,6 +13,7 @@ Challenges
 - The original design looks like it has a fixed height for the header. This works fine on the PC, but for mobile, a fixed height for the header element tends to break depending on the device or orientation. 
     - So I'm using media queries to keep it for PC, but not for mobile.
 - It was a long process to get the mobile nav setup with it's animations, positioning and extra animated swirl.
+- It was a small challenge to get the desktop nav working correctly. Forcing the browser to show what was missing was tough.
 
 
 

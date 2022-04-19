@@ -1,3 +1,5 @@
+/* Welcome to my CSS! I'd love to get any feedback you have, please reach out! */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,23 +56,22 @@ table {
 	
 `````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
 
-/* To make the anchor links smooth, this is being added to the entire page. This was from: https://gomakethings.com/how-to-animate-scrolling-to-anchor-links-with-one-line-of-css/ */
+/* To make the anchor links smooth, scroll-behaviour is being added to the entire page. This was from: https://gomakethings.com/how-to-animate-scrolling-to-anchor-links-with-one-line-of-css/ */
 
 html {
 	scroll-behavior: smooth;
 	max-width: 1281px;
 	margin: 0 auto;
 }
+
 /* Disable smooth scrolling when users have prefers-reduced-motion enabled
 */
-
 
 @media screen and (prefers-reduced-motion: reduce) {
    html {
 	   scroll-behavior: auto;
    }
 }
-
 
 /* Fonts, spacing and a little bit of colour. */
 
@@ -119,9 +120,7 @@ h4 {
 	font-size: 16px;
 	font-weight: 600;
 	margin-bottom: 8px;
-
 }
-
 
 p {
 	font-size: 16px;
@@ -190,7 +189,7 @@ header {
 }
 
 /* Makes the icon blue on either a hover or button press. */
-.next-screen:hover svg #Icon_awesome-arrow-circle-right, .next-screen:active svg #Icon_awesome-arrow-circle-right{
+.next-screen:hover svg #Icon_awesome-arrow-circle-right1, .next-screen:active svg #Icon_awesome-arrow-circle-right1,.next-screen:hover svg #Icon_awesome-arrow-circle-right2, .next-screen:active svg #Icon_awesome-arrow-circle-right2,.next-screen:hover svg #Icon_awesome-arrow-circle-right, .next-screen:active svg #Icon_awesome-arrow-circle-right{
 	fill: #1f5673;
 }
 
@@ -214,9 +213,7 @@ scroll-margin-top: 88px;
 	.header-banner {
 		margin-top: 96px;
 	}
-
 }
-
 /* Formats the next-screen button, so the text is centred. */
 
 .next-screen-container {
@@ -224,8 +221,6 @@ scroll-margin-top: 88px;
 	flex-direction: column;
 	text-align: center;
 }
-
-
 
 /* 	---------- Mobile Nav---------- */
 
@@ -254,7 +249,6 @@ nav {
 	margin: 16px 8px 0 8px;
   }
 
-
   /* Puts the hamburger menu button in the right place. */
 
 .nav > .nav-btn > label {
@@ -263,9 +257,7 @@ nav {
 	height: 40px;
   }
 
-
 /* Makes the hamburger button red when hovered, or when the menu is open. */
-
 
 .nav > .nav-btn > #menu-toggle:hover span, .nav  #nav-check:checked ~ .nav-btn > label > span {
 	background-color: #A63B51;
@@ -389,7 +381,6 @@ nav {
 	height: calc(var(--vh, 1vh) * 100);
 	}
   }
-
 
   /* This hides the secret weapon. The form field that is the actual reason why the nav menu moves in and out is hidden. This makes the hamburger button look like a button. It's meant to use only HTML and CSS button, without the javascript. Although, javascript was used to keep other things responsive. But hey, at least this doesn't! */
   .nav > #nav-check {
@@ -587,23 +578,28 @@ nav {
 
 /* ----- Sections ----- */
 
+/* Giving the sections a lot of space */
 section {
 	margin-bottom: 80px;
 }
 
+/* Aligning the content in the section */
 .feature, .subsection {
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 }
+/* Ensuring the images stay full size */
 .feature picture img, .subsection picture img {
 	width:100%;
 }
 
+/* Helps shrink the images down. */
 .halfimg, .subsection {
 	align-items: center;
 }
 
+/* Adds drop shadow to a few of the images with a while background. */
 .dropshadow {
 	box-shadow: 0 3px 6px #000;
 }
@@ -626,6 +622,7 @@ footer {
 	margin-bottom: 16px;
 }
 
+/* A different format for smaller links, dowesn't, but keeping the underline. */
 .link {
 	font-size: 25.89px;
 	font-weight: 400;
@@ -642,6 +639,7 @@ footer {
 		transform: scale(1.3, 1.3);
 }
 
+/* Formatting for the go to top button, at the bottom of the screen. */
 .go-top {
 	display: flex;
 	align-items: center;
@@ -652,22 +650,26 @@ footer {
 	-webkit-tap-highlight-color: transparent;
 }
 
+/* Makes the button move when tapped. */
 .go-top:active .top-btn {
 	transform: scale(1.3, 1.3);
 
 }
 
+/* Fills the button black when hovered */
 .top-btn:hover svg path {
 	fill:#000;
 }
+
+
+/* Formats the top text. */
 
 .top-text {
 	font-size: 25.83px;
 	font-weight: 400;
 	color:#1f5673;
-	margin: 0 16px;
 }
-
+/* Formats the copywrite icon */
 aside {
 	text-align: center;
 	margin-bottom: 24px;
@@ -680,7 +682,7 @@ aside {
 
 @media only screen and (min-width: 768px) {
 
-
+/* Fonts */
 
 	.display {
 		font-size: 177.45px;
@@ -742,6 +744,7 @@ aside {
 		font-weight: 400;
 	}
 
+/* Nav spacing adjustements */
 	.nav {
 		margin: 16px 32px 0 32px;
 	}
@@ -753,6 +756,15 @@ aside {
 		margin-right: 64px;
 	}
 
+	/* The nav selector needd a small change at this width. */
+	.selector {
+	
+		top: -200%;
+		left: 10px;
+		width:90%;
+	}
+
+/* New footer format */
 	footer {
 		display: flex;
 		justify-content: space-around;
@@ -763,13 +775,7 @@ aside {
 		margin-bottom:0px;
 	}
 
-	.selector {
-	
-		top: -200%;
-		left: 10px;
-		width:90%;
-	}
-
+/*  Changing the way the details section aligns for the about and portfolio (Moody Pops) pages */
 	.details {
 		margin-right: 24px;
 	}
@@ -804,152 +810,8 @@ aside {
 
 @media only screen and (min-width: 1280px) {
 
-body {
-	box-shadow: 0 3px 6px #000;
-	margin: 20px 0;
-}
+/* Fonts and margins for the largest width */
 
-header {
-	height: unset;
-}
-
-.nav {
-
-	margin: 16px 64px 0 64px;
-
-}
-
-.header-banner {
-	margin-top: unset;
-}
-
-	nav {
-		position:unset;
-		height:unset;
-	}
-
-	.nav-btn {
-		display: none;
-	  }
-	  	  
-	.nav > .nav-links {
-		position: static;
-		height: unset;
-
-}
-
-.nav > .nav-links > a {
-	width: unset;
-	
-}
-.nav > #nav-check:not(:checked) ~ .nav-links {
-	  flex-direction: row;
-	  justify-content: end;
-	  margin-left: 400px;
-	 
-}
-
-#contact {
-	display:none;
-	
-}
-
-.nav-links a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 250px;
-	flex: 1 1 auto;
-
-}
-
-#contact2 { 
-	display:block;
-	position: fixed;
-	color:#A63B51;
-	top: 145.5px;
-}
-
-#contact3 { 
-	display:block;
-	opacity: 0;
-	cursor:default;
-}
-
-.selector, .b {
-	display: none;
-}
-
-.nav > #nav-check:checked ~ .nav-links > a > svg > .b {
-	display: none;
-}
-
-.desktop-nav-swirl {
-	display: block;
-	position: absolute;
-	top: 60px;
-	width: 120px;
-}
-
-.next-screen-container {
-	display:none;
-}
-
-.header-banner, h1 {
-	margin-right: 256px;
-}
-
-.content-types {
-	display:flex;
-	justify-content:flex-start;
-	margin: -20px 24px 0 128px;
-}
-
-.preview {
-	margin-left: 64px;
-}
-.next-page {
-	display:none;
-}
-
-.feature {
-	display: flex;
-	flex-direction: row;
-	margin-right: 256px;
-	align-items: center;
-	
-}
-.feature picture {
-	flex-basis: 500%;
-	margin: 64px 0 64px 0;
-}
-
-.feature picture img {
-	max-width: 100%;
-	
-}
-
-.details {
-	margin-right: 256px;
-}
-
-.section-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-}
-
-.details .section-container section .subsection {
-	gap: 0px;
-}
-.details .section-container section:nth-child(odd) .subsection {
-	flex-direction: row;
-	}
-
-.details .section-container section .subsection picture {
-	flex-basis: 200%;
-	margin: 0
-}
 	.display {
 		font-size: 287.11px;
 		font-weight: 600;
@@ -1002,5 +864,172 @@ header {
 		font-size: 9.89px;
 		font-weight: 400;
 	}
+
+	/* This gives the body a shadow, which makes it look kind of like paper. */
+
+body {
+	box-shadow: 0 3px 6px #000;
+	margin: 20px 0;
+}
+
+/* Removing the fixed nav, at this width, we don't need one. */
+
+header {
+	height: unset;
+}
+
+/* We don't need so much space vertical on the larger sizes. */
+.header-banner {
+	margin-top: unset;
+}
+
+/* Let's make a new kind of nav for this width. To do so, I've got to hide some of the previous nav's components and force the browser to show others.  */
+			.nav {
+
+				margin: 16px 64px 0 64px;
+
+			}
+
+				nav {
+					position:unset;
+					height:unset;
+				}
+
+				.nav-btn {
+					display: none;
+				}
+					
+				.nav > .nav-links {
+					position: static;
+					height: unset;
+
+			}
+
+			.nav > .nav-links > a {
+				width: unset;
+				
+			}
+			.nav > #nav-check:not(:checked) ~ .nav-links {
+				flex-direction: row;
+				justify-content: end;
+				margin-left: 400px;
+				
+			}
+
+			#contact {
+				display:none;
+				
+			}
+
+			.nav-links a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 250px;
+				flex: 1 1 auto;
+
+			}
+
+			#contact2 { 
+				display:block;
+				position: fixed;
+				color:#A63B51;
+				top: 145.5px;
+			}
+
+			#contact3 { 
+				display:block;
+				opacity: 0;
+				cursor:default;
+			}
+
+			.selector, .b {
+				display: none;
+			}
+
+			.nav > #nav-check:checked ~ .nav-links > a > svg > .b {
+				display: none;
+			}
+
+			.desktop-nav-swirl {
+				display: block;
+				position: absolute;
+				top: 60px;
+				width: 120px;
+			}
+
+			.next-screen-container {
+				display:none;
+			}
+
+/* End of desktop nav conversion changes */
+
+
+/* With the fixed Contact nav button, we've got to make space for it. */
+
+.header-banner, h1 {
+	margin-right: 256px;
+}
+
+/* These icons are positioned a bit differently on desktop */
+.content-types {
+	display:flex;
+	justify-content:flex-start;
+	margin: -20px 24px 0 128px;
+}
+
+.preview {
+	margin-left: 64px;
+}
+
+/* Hiding the .next-page icon, it would get in the way of the Contact button*/
+.next-page {
+	display:none;
+}
+
+/* Changing the way the featured content on the moody pops and the about pages looks. */
+
+.feature {
+	display: flex;
+	flex-direction: row;
+	margin-right: 256px;
+	align-items: center;
+	
+}
+
+/* Happy to realize how to make the images larger when in flex: flex-basis! */
+.feature picture {
+	flex-basis: 500%;
+	margin: 64px 0 64px 0;
+}
+
+.feature picture img {
+	max-width: 100%;
+	
+}
+
+/* Adding more margin to make this fit. */
+.details {
+	margin-right: 256px;
+}
+/* My first and only use of grid! It was very useful for the details sections on desktop */
+.section-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.details .section-container section .subsection {
+	gap: 0px;
+}
+.details .section-container section:nth-child(odd) .subsection {
+	flex-direction: row;
+	}
+
+.details .section-container section .subsection picture {
+	flex-basis: 200%;
+	margin: 0
+}
+	/* Thanks for reading! */
 }
 
